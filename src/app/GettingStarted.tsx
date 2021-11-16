@@ -60,4 +60,5 @@ const GettingStarted = () => {
   )
 }
 
-export default GettingStarted
+export default GettingStarted;
+
