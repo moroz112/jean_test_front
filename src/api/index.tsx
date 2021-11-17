@@ -1,6 +1,7 @@
 import * as React from 'react'
 import OpenAPIClientAxios from 'openapi-client-axios'
 import { Client } from './gen/client'
+import {useLocation} from 'react-router-dom'
 import definition from './gen/schema.json'
 
 interface ApiContextState {
@@ -53,3 +54,8 @@ export const useApi = () => {
 
   return client
 }
+
+export const useQuery = () => {
+  const {search} = useLocation();
+  return new URLSearchParams(search);
+};
